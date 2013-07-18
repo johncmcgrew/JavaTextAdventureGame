@@ -17,7 +17,6 @@ public class TreeViewPanel extends JPanel implements Observer {
 
 	
 	public TreeViewPanel(){
-		super(new GridLayout(1, 0));
 		setBorder(BorderFactory.createTitledBorder("Tree View"));
 		tree = new JTree(Gamestate.current.treeModel);
 		

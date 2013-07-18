@@ -38,12 +38,14 @@ public class GameGui implements Runnable {
 
 		DescriptionPanel descriptionPanel = new DescriptionPanel();
 
-		centerPanel.add(descriptionPanel, BorderLayout.NORTH);
+		centerPanel.add(descriptionPanel, BorderLayout.CENTER);
 
-		TreeViewPanel treeViewPanel = new TreeViewPanel();
-		centerPanel.add(treeViewPanel, BorderLayout.CENTER);
+		// centerPanel.add(treeViewPanel, BorderLayout.CENTER);
 
 		mainPanel.add(centerPanel, BorderLayout.CENTER);
+
+		TreeViewPanel treeViewPanel = new TreeViewPanel();
+		mainPanel.add(treeViewPanel, BorderLayout.SOUTH);
 
 		Box westPanel = Box.createVerticalBox();
 		{
@@ -54,6 +56,7 @@ public class GameGui implements Runnable {
 			westPanel.add(locationPanel);
 			westPanel.add(personPanel);
 			westPanel.add(itemPanel);
+
 		}
 		mainPanel.add(westPanel, BorderLayout.WEST);
 
